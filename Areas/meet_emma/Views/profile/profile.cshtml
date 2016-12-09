@@ -1,0 +1,155 @@
+﻿
+<div class="hbox hbox-auto-xs hbox-auto-sm ng-scope">
+
+    <div class="col">
+        <!-- main header -->
+        <div class="bg-light lter b-b wrapper-md dvFloat">
+            <div class="dvFloat">
+                <div class="col-sm-6 col-xs-12">
+                    <h1 class="m-n font-thin h3 text-black">My Account</h1>
+                    <small class="text-muted"></small>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-md">
+            <div class="row">
+                <div class="chartLeft" data-ng-init="profiledata()">
+                    <div class="panel panel-default">
+                        <div class="panel-heading font-bold">Profile</div>
+                        <div class="panel-body">
+                            <div class="bs-example form-horizontal">
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Name : </label>
+                                    </div>
+                                    <div class="col-lg-9 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.FirstName}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Company Name : </label>
+                                    </div>
+                                    <div class="col-lg-9 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.Company_Name}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Website :</label>
+                                    </div>
+                                    <div class="col-lg-9 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.Company_Website}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Telephone Number :</label>
+                                    </div>
+                                    <div class="col-lg-9 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.Telephone_Number}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">City :</label>
+                                    </div>
+                                    <div class="col-lg-9 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.City}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Street :</label>
+                                    </div>
+                                    <div class="col-lg-9 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.Street}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">ZipCode :</label>
+                                    </div>
+                                    <div class="col-lg-9 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.Zip}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Country :</label>
+                                    </div>
+                                    <div class="col-lg-7 dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{ProfileDetails.Country}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chartRight">
+                    <div class="panel panel-default" data-ng-init="getaccounts()">
+                        <div class="panel-heading font-bold row-sm text-center">
+                            <a href="" class="block panel padder-v bg-primary item">
+                                <span class="text-white font-thin h1 block">{{count}}</span>
+                                <span class="text-muted text-xs">Subscriptions</span>
+                                <span class="top">
+                                    <i class="fa fa-caret-up text-warning m-l-sm m-r-sm"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="bs-example form-horizontal dvFloat" style="border:1px dotted;" ng-repeat="item in subscriptions">
+                                <div class="form-group dvFloat">
+
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Project Name :</label>
+                                    </div>
+
+
+                                    <div class="dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{item.Project_Name}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group dvFloat">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Website Url :</label>
+                                    </div>
+                                    <div class="dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{item.websiteurl}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group dvFloat">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Monthly Spend :</label>
+                                    </div>
+                                    <div class="dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{item.monthlyspend}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group dvFloat">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Agency Fee :</label>
+                                    </div>
+                                    <div class="dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{item.agencyfee}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group dvFloat">
+                                    <div class="dvLeftProfile">
+                                        <label class="control-label">Next Invoice Date :</label>
+                                    </div>
+                                    <div class="dvRightProfile">
+                                        <label class="control-label" style="text-align:left;">{{item.nextinvoice}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

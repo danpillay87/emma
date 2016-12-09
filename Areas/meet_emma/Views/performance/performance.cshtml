@@ -1,0 +1,205 @@
+﻿<!-- main header -->
+<div class="bg-light lter b-b wrapper-md dvFloat">
+    <div class="dvFloat">
+        <div class="col-sm-6 col-xs-12">
+            <h1 class="m-n font-thin h3 text-black">Performance</h1>
+            <small class="text-muted"></small>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper-md dvFloat">
+
+    <div class="row dvFloat" data-ng-init="getchartdata()">
+        <div class="col-md-5">
+            <div class="row row-sm text-center">
+                <div class="col-xs-6">
+                    <div class="panel padder-v item">
+                        <div class="h1 text-info font-thin h1">{{clicks}}</div>
+                        <span class="text-muted text-xs">Clicks</span>
+                        <div class="top text-right w-full">
+                            <i class="fa fa-caret-down text-warning m-r-sm"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="block panel padder-v bg-primary item">
+                        <div class="h1 text-info font-thin h1">{{cost}}</div>
+                        <span class="text-muted text-xs">Cost</span>
+                        <div class="top text-right w-full">
+                            <i class="fa fa-caret-down text-warning m-r-sm"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="row row-sm text-center">
+                <div class="col-xs-6">
+                    <div class="panel padder-v item">
+                        <div class="font-thin h1">{{cpc}}</div>
+                        <span class="text-muted text-xs">Avg. CPC</span>
+                        <div class="bottom">
+                            <i class="fa fa-caret-up text-warning m-l-sm m-r-sm"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                  <a href="" class="block panel padder-v bg-primary item">
+                    <span class="h1 text-info font-thin h1 block">{{conv}}</span>
+                    <span class="text-muted text-xs">Conversions</span>
+                    <span class="top">
+                      <i class="fa fa-caret-up text-warning m-l-sm m-r-sm"></i>
+                    </span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chartRow dvFloat">
+        <div class="chartLeft">
+            <div ng-app="ClientWall" class="nav-md">
+                <div id="content" role="main">
+                    <div class="app-content-body">
+
+                        <div class="hbox hbox-auto-xs hbox-auto-sm">
+                            <!-- main -->
+                            <div class="col">
+
+
+
+                                <div class="col-md-7" ng-controller="PerformanceController as ctrl" data-ng-init="getchartdata()">
+                                    <div class="panel">
+                                        <label class="i-switch bg-warning pull-right" ng-init="showSpline=true">
+                                            <input type="checkbox" ng-model="showSpline">
+                                            <i></i>
+                                        </label>
+                                        <div class="panel-heading"> Click Performance </div>
+                                        <div ui-jq="plot" ui-refresh="showSpline" ui-options="{{clicksData}}" style="height:246px">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- / main -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div><!-- /content themeforest chart -->
+        </div>
+
+        <div class="chartRight">
+            <!-- content themeforest chart -->
+            <div ng-app="ClientWall" class="nav-md">
+                <div id="content" role="main">
+                    <div class="app-content-body ">
+
+                        <div class="hbox hbox-auto-xs hbox-auto-sm">
+                            <!-- main -->
+                            <div class="col">
+
+
+
+                                <div class="col-md-7" ng-controller="PerformanceController as ctrl" data-ng-init="getchartdata()">
+                                    <div class="panel">
+                                        <label class="i-switch bg-warning pull-right" ng-init="showSpline=true">
+                                            <input type="checkbox" ng-model="showSpline">
+                                            <i></i>
+                                        </label>
+                                        <div class="panel-heading"> Cost Performance </div>
+                                        <div ui-jq="plot" ui-refresh="showSpline" ui-options="{{costData}}" style="height:246px">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- / main -->
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- /content themeforest chart -->
+        </div>
+    </div>
+
+    <div class="chartRow dvFloat" data-ng-init="adgroupdata()">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Top Performing Adgroups
+                </div><div class="dvFloat scrollTable">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Adgroup</th>
+                                <th>Clciks</th>
+                                <th>Conv</th>
+                                <th>Impressions</th>
+                                <th>Cost</th>
+                                <th>CTR</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr ng-repeat="item in adgroup">
+                                <td style="vertical-align:middle;">{{item.adgroup}}</td>
+                                <td style="vertical-align:middle;"> {{item.clicks}}</td>
+                                <td style="vertical-align:middle;">{{item.conv}}</td>
+                                <td style="vertical-align:middle;">{{item.imps}}</td>
+                                <td style="vertical-align:middle;">{{item.cost}}</td>
+                                <td style="vertical-align:middle;">{{item.ctr}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chartRow dvFloat" data-ng-init="keyworddata()">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Top Performing Keywords
+                </div>
+                <div class="dvFloat scrollTable">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>MatchType</th>
+                                <th>Clciks</th>
+                                <th>Conv</th>
+                                <th>Impressions</th>
+                                <th>Cost</th>
+                                <th>CTR</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr ng-repeat="item in keywords">
+                                <td style="vertical-align:middle;">{{item.keyword}}</td>
+                                <td style="vertical-align:middle;">{{item.matchtype}}</td>
+                                <td style="vertical-align:middle;"> {{item.clicks}}</td>
+                                <td style="vertical-align:middle;">{{item.conv}}</td>
+                                <td style="vertical-align:middle;">{{item.imps}}</td>
+                                <td style="vertical-align:middle;">{{item.cost}}</td>
+                                <td style="vertical-align:middle;">{{item.ctr}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../ThemeforestChart/js/ui-load.js"></script>
+<script src="../ThemeforestChart/js/ui-jp.config.js"></script>
+<script src="../ThemeforestChart/js/ui-jp.js"></script>

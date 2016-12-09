@@ -1,0 +1,316 @@
+﻿body {
+}
+
+/*  All device */
+
+.dvFloat{float:left;width:100%;}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: none !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: block !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: none !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: none !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: none !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: block !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* STYLES GO HERE */ 
+.chartRow{  margin-left:-15px; margin-top:15px;}
+.chartLeft{
+    margin : 0 6px 5px 6px;
+    float:left;
+    width:45%;}
+.chartRight{    
+    margin : 0 6px 5px 6px;
+    float:left;
+    width:45%;
+}
+.scrollTable {
+    overflow: hidden;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.app-footer {
+    display: block !important; 
+}
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 0 6px 5px 6px;
+    float:left;
+    width:45%;}
+.chartRight{    
+    margin : 0 6px 5px 6px;
+    float:left;
+    width:45%;
+}
+.scrollTable {
+    overflow: hidden;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.app-footer {
+    display: block !important; 
+}
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: none !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:30%; text-align:right;}
+.dvRightProfile{float:right;width:69%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: none !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+.chartLeft{
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;}
+.chartRight{    
+    margin : 9px 0px 5px 0px;
+    float:left;
+    width:98%;
+}
+.scrollTable {
+    overflow: scroll;
+}
+.dvLeftProfile{float:left;width:40%; text-align:right;}
+.dvRightProfile{float:right;width:60%; text-align:left;}
+.panel-body {padding: 0px;}
+.app-footer {
+    display: none !important; 
+}
+.row-sm {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
